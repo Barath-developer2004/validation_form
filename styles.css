@@ -22,15 +22,12 @@ body {
 
 /* Container styling for the form with blur effect */
 .container {
-    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
-    backdrop-filter: blur(100px); /* Apply blur effect */
-    padding: 30px; /* Padding around the content */
+    max-width: 400px; /* Set a maximum width for the form */
+    margin: auto; /* Center the container */
+    padding: 20px; /* Add some padding inside the container */
+    background-color: white; /* White background for the form */
     border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    width: 400px; /* Fixed width */
-    max-width: 100%; /* Responsive max-width */
-    text-align: center; /* Center the text */
-    margin: 20px; /* Space around the container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 /* Remaining styles for the form and other elements... */

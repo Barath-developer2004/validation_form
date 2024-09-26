@@ -19,34 +19,51 @@
             <span></span>
             <span></span>
             <span></span>
-          </label>
+        </label>
     </nav>
 
     <!-- Container for Form -->
     <div class="container">
         <form id="registrationForm">
-            <h2>Registeration Form</h2>
+            <h2>Registration Form</h2>
+
+            <!-- Username Field -->
             <label for="username">Username:</label>
             <div class="input-container">
                 <i class="fas fa-user"></i>
                 <input type="text" id="username" name="username" required>
             </div>
             <span class="error" id="usernameError"></span>
-    
+
+            <!-- Email Field -->
             <label for="email">Email:</label>
             <div class="input-container">
                 <i class="fas fa-envelope"></i>
                 <input type="email" id="email" name="email" required>
             </div>
             <span class="error" id="emailError"></span>
-    
+
+            <!-- Password Field -->
             <label for="password">Password:</label>
             <div class="input-container">
                 <i class="fas fa-lock"></i>
                 <input type="password" id="password" name="password" required minlength="6">
             </div>
             <span class="error" id="passwordError"></span>
-    
+
+            <!-- Date Field -->
+            <label for="dob">Date of Birth:</label>
+            <div class="input-container">
+                <i class="fas fa-calendar"></i>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <span class="error" id="dobError"></span>
+
+            <!-- Description Field -->
+            
+           
+
+            <!-- Submit Button -->
             <button type="submit">Register</button>
         </form>
 
@@ -54,10 +71,6 @@
         <p id="successMessage" class="success-message"></p>
     </div>
 
-    <!-- Social Media Links -->
-    <!-- Social Media Links with local images -->
-
     <script src="script.js"></script>
 </body>
 </html>
-
