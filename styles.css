@@ -24,7 +24,7 @@ body {
 .container {
     max-width: 400px; /* Set a maximum width for the form */
     margin: auto; /* Center the container */
-    padding: 20px; /* Add some padding inside the container */
+    padding: 10px; /* Add some padding inside the container */
     background-color: white; /* White background for the form */
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
@@ -52,19 +52,27 @@ body {
 }
 
 /* Navigation links styling */
+/* Navigation links styling */
 .navbar a {
     color: #f2f2f2; /* Light text color */
-    text-align: center; /* Center text */
-    text-decoration: none; /* No underline */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+    text-align: center;
+    padding: 10px 20px; /* Adjust padding for the button effect */
+    text-decoration: none;
+    margin: 0 30px; /* Spacing between each link */
+    display: inline-block;
+    border-radius: 5px; /* Rounded corners for button effect */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover */
 }
 
-/* Change link color on hover */
+/* Hover effect to resemble a button */
 .navbar a:hover {
-    background-color: #0056b3; /* Change background color on hover */
-    color: white; /* Change text color on hover */
-    
+    background-color: #0056b3; /* Darker blue background on hover */
+    color: white; /* Change text color to white */
+    padding: 12px 25px; /* Increase padding on hover to enlarge the button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for button effect */
+    transform: scale(1.05); /* Slight scaling for button-like animation */
 }
+
 
 
 
