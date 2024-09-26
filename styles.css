@@ -22,19 +22,18 @@ body {
 
 /* Container styling for the form with blur effect */
 .container {
-    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
-    backdrop-filter: blur(100px); /* Apply blur effect */
-    padding: 30px; /* Padding around the content */
+    max-width: 400px; /* Set a maximum width for the form */
+    margin: auto; /* Center the container */
+    padding: 10px; /* Add some padding inside the container */
+    background-color: white; /* White background for the form */
     border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    width: 400px; /* Fixed width */
-    max-width: 100%; /* Responsive max-width */
-    text-align: center; /* Center the text */
-    margin: 20px; /* Space around the container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 /* Remaining styles for the form and other elements... */
 
+
+/* Navigation bar styling */
 
 /* Navigation bar styling */
 .navbar {
@@ -42,28 +41,40 @@ body {
     top: 0; /* Align to the top */
     width: 100%; /* Full width */
     display: flex; /* Use flex to position items */
-    justify-content: space-between; /* Space out links and burger */
+    justify-content: center; /* Center the items in the navbar */
     align-items: center; /* Center items vertically */
     background-color: #333; /* Dark background for the navbar */
     padding: 10px 20px; /* Add some padding */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
     z-index: 1000; /* Keep it on top of other content */
+    gap: 30px;
+    height:40px; /* Add equal space between the links (you can change to 10px, 30px, etc.) */
 }
 
 /* Navigation links styling */
+/* Navigation links styling */
 .navbar a {
     color: #f2f2f2; /* Light text color */
-    text-align: center; /* Center text */
-    padding: 14px 16px; /* Padding around links */
-    text-decoration: none; /* No underline */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+    text-align: center;
+    padding: 10px 20px; /* Adjust padding for the button effect */
+    text-decoration: none;
+    margin: 0 30px; /* Spacing between each link */
+    display: inline-block;
+    border-radius: 5px; /* Rounded corners for button effect */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover */
 }
 
-/* Change link color on hover */
+/* Hover effect to resemble a button */
 .navbar a:hover {
-    background-color: #0056b3; /* Change background color on hover */
-    color: white; /* Change text color on hover */
+    background-color: #0056b3; /* Darker blue background on hover */
+    color: white; /* Change text color to white */
+    padding: 12px 25px; /* Increase padding on hover to enlarge the button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for button effect */
+    transform: scale(1.05); /* Slight scaling for button-like animation */
 }
+
+
+
 
 /* Burger menu styling */
 .burger {
@@ -186,7 +197,7 @@ form button:hover {
 
 /* Overall form styling */
 .container {
-    background-color: rgba(255, 255, 255, 0.7); /* Slightly transparent white background */
+    background-color: rgba(239, 205, 255, 0.7);/* Slightly transparent white background */
     backdrop-filter: blur(10px); /* Blur effect on the background */
     padding: 30px; /* Padding around the content */
     border-radius: 8px; /* Rounded corners */
