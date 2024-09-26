@@ -34,24 +34,27 @@ body {
 
 
 /* Navigation bar styling */
+
+/* Navigation bar styling */
 .navbar {
     position: fixed; /* Fix the navbar at the top */
     top: 0; /* Align to the top */
     width: 100%; /* Full width */
     display: flex; /* Use flex to position items */
-    justify-content: space-between; /* Space out links and burger */
+    justify-content: center; /* Center the items in the navbar */
     align-items: center; /* Center items vertically */
     background-color: #333; /* Dark background for the navbar */
     padding: 10px 20px; /* Add some padding */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
     z-index: 1000; /* Keep it on top of other content */
+    gap: 30px;
+    height:40px; /* Add equal space between the links (you can change to 10px, 30px, etc.) */
 }
 
 /* Navigation links styling */
 .navbar a {
     color: #f2f2f2; /* Light text color */
     text-align: center; /* Center text */
-    padding: 14px 16px; /* Padding around links */
     text-decoration: none; /* No underline */
     transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
 }
@@ -60,7 +63,10 @@ body {
 .navbar a:hover {
     background-color: #0056b3; /* Change background color on hover */
     color: white; /* Change text color on hover */
+    
 }
+
+
 
 /* Burger menu styling */
 .burger {
@@ -183,7 +189,7 @@ form button:hover {
 
 /* Overall form styling */
 .container {
-    background-color: rgba(255, 255, 255, 0.7); /* Slightly transparent white background */
+    background-color: rgba(239, 205, 255, 0.7);/* Slightly transparent white background */
     backdrop-filter: blur(10px); /* Blur effect on the background */
     padding: 30px; /* Padding around the content */
     border-radius: 8px; /* Rounded corners */
