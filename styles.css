@@ -1,0 +1,291 @@
+/* Reset body margin and padding */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full viewport height */
+    display: flex; /* Use flexbox for body */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background-image: url('./winter-snowflakes-on-branches-desktop-wallpaper.jpg'); /* Path to your background image */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+}
+
+/* New parent container to hold the form */
+.app-container {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100%; /* Full height of the viewport */
+}
+
+/* Container styling for the form with blur effect */
+.container {
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
+    backdrop-filter: blur(100px); /* Apply blur effect */
+    padding: 30px; /* Padding around the content */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 400px; /* Fixed width */
+    max-width: 100%; /* Responsive max-width */
+    text-align: center; /* Center the text */
+    margin: 20px; /* Space around the container */
+}
+
+/* Remaining styles for the form and other elements... */
+
+
+/* Navigation bar styling */
+.navbar {
+    position: fixed; /* Fix the navbar at the top */
+    top: 0; /* Align to the top */
+    width: 100%; /* Full width */
+    display: flex; /* Use flex to position items */
+    justify-content: space-between; /* Space out links and burger */
+    align-items: center; /* Center items vertically */
+    background-color: #333; /* Dark background for the navbar */
+    padding: 10px 20px; /* Add some padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    z-index: 1000; /* Keep it on top of other content */
+}
+
+/* Navigation links styling */
+.navbar a {
+    color: #f2f2f2; /* Light text color */
+    text-align: center; /* Center text */
+    padding: 14px 16px; /* Padding around links */
+    text-decoration: none; /* No underline */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+/* Change link color on hover */
+.navbar a:hover {
+    background-color: #0056b3; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+}
+
+/* Burger menu styling */
+.burger {
+    display: none; /* Hidden by default */
+    flex-direction: column; /* Stack the lines */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.burger input {
+    display: none; /* Hide the checkbox */
+}
+
+.burger span {
+    display: block; /* Display each line */
+    width: 30px; /* Slightly wider lines for visibility */
+    height: 3px; /* Height of each line */
+    background-color: white; /* Color of each line */
+    margin: 4px 0; /* Space between lines */
+    transition: transform 0.4s, opacity 0.4s; /* Smooth transitions */
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .navbar a {
+        display: none; /* Hide links by default on small screens */
+    }
+
+    .burger {
+        display: flex; /* Show burger icon on small screens */
+    }
+
+    .burger input:checked ~ span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px); /* Rotate top line */
+    }
+
+    .burger input:checked ~ span:nth-child(2) {
+        opacity: 0; /* Hide middle line */
+    }
+
+    .burger input:checked ~ span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px); /* Rotate bottom line */
+    }
+
+    .burger input:checked + .navbar a {
+        display: block; /* Show links when burger is checked */
+        background-color: #333; /* Keep background color for links */
+        color: #f2f2f2; /* Link color */
+        text-align: left; /* Align text to the left */
+        padding: 10px 20px; /* Padding for the links */
+        border-top: 1px solid #444; /* Optional: Add a border to separate links */
+    }
+}
+
+/* Container styling for the form */
+.container {
+    background-color: white; /* White background for the form */
+    padding: 30px; /* Padding around the content */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 400px; /* Fixed width */
+    max-width: 100%; /* Responsive max-width */
+    text-align: center; /* Center the text */
+    margin: 20px; /* Space around the container */
+    margin-top: 60px; /* Add top margin to avoid overlapping with fixed navbar */
+}
+
+/* Styling the form elements */
+form {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack form elements vertically */
+}
+
+form label {
+    display: block; /* Each label takes up the full width */
+    text-align: left; /* Align text to the left */
+    margin-bottom: 8px; /* Space below the label */
+    font-weight: bold; /* Make label text bold */
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+    width: 100%; /* Full width input fields */
+    padding: 10px; /* Padding inside input fields */
+    margin-bottom: 15px; /* Space below input fields */
+    border: 1px solid #ccc; /* Light border around input fields */
+    border-radius: 4px; /* Rounded corners for input fields */
+    box-sizing: border-box; /* Ensure padding is included in total width */
+}
+
+/* Button Styling */
+form button {
+    padding: 10px 20px; /* Padding around the button */
+    background-color: #007BFF; /* Blue background color */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to pointer */
+    width: 100%; /* Full width button */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+form button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Error message styling */
+.error {
+    color: red; /* Red text for error messages */
+    font-size: 12px; /* Smaller font size */
+    margin-bottom: 10px; /* Space below error message */
+}
+
+/* Success message styling */
+.success-message {
+    color: green; /* Green text for success messages */
+    font-size: 16px; /* Larger font size for success */
+    margin-top: 10px; /* Space above success message */
+}
+
+/* Overall form styling */
+.container {
+    background-color: rgba(255, 255, 255, 0.7); /* Slightly transparent white background */
+    backdrop-filter: blur(10px); /* Blur effect on the background */
+    padding: 30px; /* Padding around the content */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    width: 400px; /* Fixed width */
+    max-width: 90%; /* Responsive max-width */
+    text-align: center; /* Center the text */
+}
+
+/* Form headings */
+h2 {
+    text-align: center; /* Center the title */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+/* Label styling */
+label {
+    margin-bottom: 5px; /* Space below labels */
+    font-weight: bold; /* Make labels bold */
+}
+
+/* Input field styling */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 10px; /* Padding inside input fields */
+    margin-bottom: 15px; /* Space below input fields */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding and border in the width */
+    font-size: 16px; /* Font size for input text */
+}
+
+/* Button styling */
+button {
+    padding: 10px; /* Padding around button text */
+    background-color: #007BFF; /* Blue background color */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+    font-size: 16px; /* Font size for button text */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Error message styling */
+.error {
+    color: red; /* Red text for error messages */
+    font-size: 12px; /* Smaller font size */
+    margin-top: -10px; /* Position above the input field */
+    margin-bottom: 10px; /* Space below error message */
+}
+
+/* Success message styling (if needed) */
+.success-message {
+    color: green; /* Green text for success messages */
+    font-size: 16px; /* Larger font size for success */
+    margin-top: 10px; /* Space above success message */
+}
+/* Container for input and icon */
+/* Container for input and icon */
+.input-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Styling for icons inside the input fields */
+/* Container for input and icon */
+.input-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Styling for icons inside the input fields (now positioned on the right) */
+.input-container i {
+    position: absolute;
+    right: 10px; /* Align the icon to the right */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 18px; /* Adjust icon size if necessary */
+    pointer-events: none; /* Prevent clicking on the icon */
+}
+
+/* Styling for input fields */
+.input-container input {
+    width: 100%;
+    padding: 10px 40px 10px 10px; /* Extra right padding for the icon */
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 40px; /* Ensure consistent height */
+    line-height: 1.5; /* To align text vertically in the center */
+}
